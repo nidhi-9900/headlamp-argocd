@@ -104,20 +104,23 @@ you should see the GitOps card on the overview and the GitOps tab in the tabs ro
 ---
 
 ## project structure
+
+```
 src/
-api/
-types.ts          # typescript types for argo cd CRD fields
-application.ts    # makeCustomResourceClass for Application + AppProject
-hooks/
-useProjectApps.ts # fetches apps and matches them to the current project
-components/
-StatusBadges.tsx          # Synced/Healthy/Degraded badges
-EmptyState.tsx            # shown when argo cd is not installed or no apps match
-GitOpsOverviewSection.tsx # the card on the project overview page
-GitOpsTab.tsx             # the full tab with table and detail drawer
-index.tsx           # registers the overview section and details tab
+  api/
+    types.ts          # typescript types for argo cd CRD fields
+    application.ts    # makeCustomResourceClass for Application + AppProject
+  hooks/
+    useProjectApps.ts # fetches apps and matches them to the current project
+  components/
+    StatusBadges.tsx          # Synced/Healthy/Degraded badges
+    EmptyState.tsx            # shown when argo cd is not installed or no apps match
+    GitOpsOverviewSection.tsx # the card on the project overview page
+    GitOpsTab.tsx             # the full tab with table and detail drawer
+  index.tsx           # registers the overview section and details tab
 examples/
-sample-app.yaml     # guestbook app for local testing
+  sample-app.yaml     # guestbook app for local testing
+```
 
 ---
 
